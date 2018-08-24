@@ -1,0 +1,12 @@
+function table_summary = summarize(table)
+    table_summary = table(); 
+    for column  = columns
+       column = column{:}; %from cell to string
+       table_summary.columnname = column;
+              table_summary.columnname = column
+       sprintf( ' The dats in this column is of type: %s' , class(column))
+       if isa(RSVFixationReportOutput.(column), 'double')
+            sprintf( ' Number of Nans: %d ', length(find(isnan(RSVFixationReportOutput.(column)))))
+       end
+    end
+end

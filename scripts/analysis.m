@@ -13,5 +13,6 @@ for participant = all_participants
     
      for trial = myparticipant.TRIALS
         thistrial = trial{:};
+        thistrial.fixationmap()
      end
 end

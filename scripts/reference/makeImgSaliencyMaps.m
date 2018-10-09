@@ -20,11 +20,11 @@ params = defaultSaliencyParams;
 for i = 1:numImages
     fprintf('Processing image %d of %d ...\n',i,numImages);
     
-    im = char(images(i));
+    im = char(images(i).name);
     im = im(1:find(im=='.',1,'last')-1);
     
     % get the image from the directory that contains your images
-    imCall = strcat('colorPhotos/',im,'.jpg');
+    imCall = strcat(images(i).folder, '/',im,'.jpg');
     
     % initializes the image properties (this is a Saliency Toolbox function)
     img = initializeImage(imCall);

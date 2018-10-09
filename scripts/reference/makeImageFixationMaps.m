@@ -3,7 +3,7 @@ function imgFDMs = makeImageFixationMaps(fixations)
 % "fixations" is ALL fixation data from all participants in a struct
 % each row is a fixation, each column is a variable (i.e., image name, x and y locations, duration, etc.)
 
-images = unique({fixations.image_filename});   
+images = unique({fixations.image_name});   
 numImages = length(images);
 
 imageSize = [600,800];

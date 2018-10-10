@@ -1,4 +1,5 @@
-images = dir('/Users/Ali/Desktop/Baycrest/saliency_analysis/Data/NovelSceneViewing');
+images = dir('C:\Users\alire\Documents\GitHub\saliency_analysis\data\NovelSceneViewing');
 images = images(3:end);
 
 makeImgSaliencyMaps(images);
+

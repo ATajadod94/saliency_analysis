@@ -10,9 +10,8 @@ end
 
 for participant = all_participants
      myparticipant = participant{:};
-    
-     for trial = myparticipant.TRIALS
-        thistrial = trial{:};
+     for trial_no = 1:myparticipant.NUM_TRIALS
+        thistrial = myparticipant.TRIALS{trial_no};
         thistrial.fixationmap()
      end
 end

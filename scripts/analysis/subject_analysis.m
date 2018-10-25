@@ -19,7 +19,7 @@ end
 
 
 clear;
-for pnum = 4:15
+for pnum = 1:15
      fname = char(strcat('participant_', string(pnum), '.mat'));
      myparticipant = load(fname);
      myparticipant = myparticipant.myparticipant;

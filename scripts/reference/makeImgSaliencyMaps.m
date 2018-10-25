@@ -56,7 +56,7 @@ avgMap = mean(maps(:,:,:),3);
 % then it normalizes (z-scores the maps)
 % this way, positive scores now reflect more salient locations across ALL
 % maps, and negative scores are the less salient locations across all maps
-for m = 1:432
+for m = 1:240
     thisMap = maps(:,:,m) - avgMap;
     normMap(:,:,m) = (thisMap - mean(thisMap(:))) / std(thisMap(:));
 end

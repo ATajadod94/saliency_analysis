@@ -1,8 +1,8 @@
 %% Creating a list of participants  from the fixation data
-all_participants = participant.participants_from_fixations('/Users/Ali/Desktop/Baycrest/saliency_analysis/Data/RSVFixationReportOutput.csv');
+all_participants = participant.participants_from_fixations('RSVFixationReportOutput.csv');
 
 
-%% Step 1 - setting basic fixation info on participant objects 
+%% Step 1 - setting basic fixation info on participant objects
 for participant = all_participants
      myparticipant = participant{:};
      myparticipant.set_trials();

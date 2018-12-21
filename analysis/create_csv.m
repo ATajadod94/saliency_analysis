@@ -1,5 +1,5 @@
 clear;
-p_folder = '/Users/ryanlab/Desktop/AliT/Scripts/saliency_analysis/correlation/corr_data/';
+p_folder = '/Users/ryanlab/Desktop/AliT/Scripts/saliency_analysis/output/corr_data/';
 p_file = 'participant_';
 output = {};
 for participant_num = 1:15

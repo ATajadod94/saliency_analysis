@@ -1,0 +1,9 @@
+p_folder = '/Users/ryanlab/Desktop/AliT/Scripts/saliency_analysis/correlation/corr_data';
+p_file = 'participant_';
+output = {};
+for participant_num = 1:15
+    myparticipant = load(strcat(p_folder,p_file,num2str(participant_num)));
+    output{participant_num,1} = participant_num;
+    output{participant_num,2} = m
+    
+end

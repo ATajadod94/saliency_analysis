@@ -1,5 +1,8 @@
 data/
 .DS_Store
-Where am i.txt
-RSVFixationReportOutput.mat
+Assets/
+output/corr_data/
+data/
+Participant_creation/participant_data/
+saliencymap_creation/novelviewing_saliency/
 *.asv

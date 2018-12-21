@@ -1,0 +1,14 @@
+%clear 
+
+imgdir = '/Users/ryanlab/Desktop/AliT/Scripts/saliency_analysis/analysis/novelviewing_saliency';
+images = dir(imgdir);
+images = images(3:end);
+
+sum_maps = zeros(1080,1920);
+for im_num = 1:length(images)
+    map = load(num2str(im_num),'map');
+    sum_maps =  sum_maps + map.map.map;
+end
+
+mean = sum_maps/240;
+save('meanmap.mat','mean')

@@ -7,16 +7,11 @@ p_file = 'participant_';
 for participant_num = 1:15
     myparticipant = load(strcat(p_folder,p_file,num2str(participant_num)));
     myparticipant = myparticipant.myparticipant;
-    for trial_num = 1:myparticipant.Num_Trials
-        %entropy = trial.entroy();
-        %ecurrence = trial.recurrence();
-        for trial_num = 1:myparticipant.NUM_TRIALS
-            trial = myparticipant(trial_num);
-            try
-                corr_sum = corr_sum + trial.fixations.corr;
-            catch
-                myparticipant.NUM_TRIALS = myparticipant.NUM_TRIALS - 1;
-            end
-        end
+    %entropy = trial.entroy();
+    %ecurrence = trial.recurrence();
+    myparticipant.to_csv('reminder.csv')
+    for trial_num = 1:myparticipant.NUM_TRIALS
+        trial = myparticipant(trial_num);
+        
     end
 end

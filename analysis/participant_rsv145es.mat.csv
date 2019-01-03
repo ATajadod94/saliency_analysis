@@ -1,0 +1,3 @@
+pname,trial_number,correlation,image_name,novelty
+participant_rsv129es.mat,360,-0.00166986886469345,187_fractal.jpg,Novel
+participant_rsv145es.mat,360,-0.000426759454824353,029_random.jpg,Repeated

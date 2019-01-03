@@ -1,0 +1,11 @@
+pname,trial_number,correlation,image_name,novelty
+participant_rsv129es.mat,360,-0.00166986886469345,187_fractal.jpg,Novel
+participant_rsv145es.mat,360,-0.000426759454824353,029_random.jpg,Repeated
+participant_rsv147es.mat,360,0.0006693808690907,139_outdoornatural.jpg,Novel
+participant_rsv148es.mat,360,-0.00104864280437601,181_inverted.jpg,Novel
+participant_rsv149es.mat,360,0.00537262037164156,027_outdoormanmade.jpg,Repeated
+participant_rsv150es.mat,360,-0.00168976133061477,107_art.jpg,Repeated
+participant_rsv151es.mat,360,-0.00113037599500879,073_cartoon.jpg,Repeated
+participant_rsv152es.mat,360,0.00293738265600548,169_random.jpg,Novel
+participant_rsv153es.mat,360,-0.00137600467610822,061_indoor.jpg,Repeated
+participant_rsv155es.mat,360,-0.000600547389644937,169_random.jpg,Novel

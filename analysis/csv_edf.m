@@ -10,21 +10,16 @@ for participant_num = 1:length(participants)
     disp(pname)
     myparticipant = load([participant_info.folder,'/',participant_info.name]);
     myparticipant = myparticipant.myparticipant;
-    output{participant_num,1} = participant_num;
-    output{participant_num,2} = pname;
-    corr_sum = 0;
+    output{participant_num,1} = pname;
     for trial_num = 1:myparticipant.NUM_TRIALS
+        output{participant_num,2} = trial_num;
         trial = myparticipant(trial_num);
-        try
-            corr_sum = corr_sum + trial.fixations.corr;
-        catch
-            disp(['trial skipped:',num2str(trial_num)])
-            myparticipant.NUM_TRIALS = myparticipant.NUM_TRIALS - 1;
-        end
+        output{participant_num,2} = trial_num;
+        output{participant_num,3} = trial.fixations.corr;
+        output{participant_num,4} = trial.fixations.img_name;
+        output{participant_num,5} = trial.fixations.novelty  ;   
     end
-    corr_mean = corr_sum/myparticipant.NUM_TRIALS;
-    output{participant_num,3} = corr_mean;
+    T = cell2table(output,'VariableNames',{'pname','trial_number','correlation','image_name','novelty'});
+    writetable(T,[pname,'.csv'])
+
 end
-output = {'p_num','age_group','correlation',output};
-T = cell2table(output(2:end,:),'VariableNames',output(1,:));
-writetable(T,'myDataFile.csv')

@@ -25,6 +25,6 @@ for participant_num = 1:length(participants)
     corr_mean = corr_sum/myparticipant.NUM_TRIALS;
     output{participant_num,3} = corr_mean;
 end
-output = {'p_num','age_group','correlation',output};
-T = cell2table(output(2:end,:),'VariableNames',output(1,:));
+temp = output
+T = cell2table(temp,'VariableNames',{'p_num','age_group','correlation'});
 writetable(T,'myDataFile.csv')
